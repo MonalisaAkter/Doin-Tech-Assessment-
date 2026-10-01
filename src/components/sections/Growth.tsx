@@ -6,87 +6,10 @@ import { courses, creatorPerks, growthStats, studentImage, creatorImage } from '
 export function Growth() {
   return (
     <section id="creators" className="relative scroll-mt-10 overflow-hidden bg-snow py-20">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-lime-400/10 blur-3xl" />
-        <div className="absolute -left-48 top-1/4 h-[500px] w-[500px] rounded-full bg-blue-800/5 blur-3xl" />
-        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-blue-800/5 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-lime-400/10 blur-3xl" />
-      </div>
-
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0"><div className="absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-lime-400/10 blur-3xl" /><div className="absolute -left-48 top-1/4 h-[500px] w-[500px] rounded-full bg-blue-800/5 blur-3xl" /><div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-blue-800/5 blur-3xl" /><div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-lime-400/10 blur-3xl" /></div>
       <div className="relative mx-auto flex max-w-[1232px] flex-col gap-20 px-4 sm:px-6 lg:gap-[72px] lg:px-4">
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-[63px]">
-          <div className="flex w-full flex-col gap-8 lg:w-[574px] lg:shrink-0 lg:gap-10">
-            <h2 className="font-poppins text-[32px] font-semibold leading-[1.2] tracking-[-0.01em] text-gray-950 md:text-heading-m lg:w-[577px]">
-              Your Path to Professional Growth Starts Here!
-            </h2>
-            <p className="max-w-[477px] font-satoshi text-body-m text-gray-700 md:text-body-l">
-              Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career
-              journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new
-              career path entirely, we have the resources you need.
-            </p>
-            <dl className="flex items-end gap-10 whitespace-nowrap sm:gap-14">
-              {growthStats.map((stat) => (
-                <div key={stat.label} className="flex flex-col-reverse">
-                  <dt className="font-satoshi text-body-l text-gray-700">{stat.label}</dt>
-                  <dd className="font-poppins text-display-xs font-medium text-blue-800">{stat.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <div className="relative w-full max-w-[621px]">
-            <div className="relative aspect-[621/552] w-full">
-              <div className="absolute left-0 top-0 w-[375px] max-w-full">
-                <CourseCard course={courses[0]} />
-              </div>
-              <img
-                src={studentImage}
-                alt="Student learning online with a laptop"
-                className="absolute left-0 top-3 h-full w-full rounded-2xl object-cover shadow-card-a"
-              />
-              <div className="absolute right-0 top-[38%] hidden md:block">
-                <ProgressCard />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:gap-[79px]">
-          <div className="relative w-full max-w-[541px]">
-            <div className="relative aspect-[541/596] w-full">
-              <div className="absolute left-0 top-11 w-full max-w-[260px]">
-                <RevenueCard wide title="Total Revenue" period="July 1-28" amount="$120.29" />
-              </div>
-              <div className="absolute left-0 top-[33%] w-[134px]">
-                <RevenueCard title="Year to Date" period="2023" amount="$1,200.38" />
-              </div>
-              <div className="absolute right-0 top-0 h-full w-[435px] max-w-[80%] overflow-hidden rounded-2xl shadow-card-a">
-                <img src={creatorImage} alt="Smiling creator with headphones holding a tablet" className="h-full w-full object-cover" />
-              </div>
-              <div className="absolute bottom-[5%] right-0 hidden md:block">
-                <HappyStudentsCard variant="feature" />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex w-full flex-col gap-8 lg:w-[580px] lg:shrink-0 lg:gap-10">
-            <h2 className="max-w-[391px] font-poppins text-[32px] font-semibold leading-[1.2] tracking-[-0.01em] text-gray-950 md:text-heading-m">
-              Create &amp; Manage Courses Easily.
-            </h2>
-            <p className="max-w-[574px] font-satoshi text-body-m text-gray-700 md:text-body-l">
-              <strong className="font-bold text-gray-950">ByteSpace</strong> supports individuals or entities in the
-              creation, publication, and administration of educational courses.
-            </p>
-            <ul className="flex flex-col gap-4">
-              {creatorPerks.map((perk) => (
-                <li key={perk} className="flex items-center gap-2 font-satoshi text-label-l text-gray-950">
-                  <CheckCircle className="h-5 w-5 shrink-0 text-blue-800" />
-                  {perk}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-[63px]"><div className="flex w-full flex-col gap-8 lg:w-[574px] lg:shrink-0 lg:gap-10"><h2 className="font-poppins text-[32px] font-semibold leading-[1.2] tracking-[-0.01em] text-gray-950 md:text-heading-m lg:w-[577px]">Your Path to Professional Growth Starts Here!</h2><p className="max-w-[477px] font-satoshi text-body-m text-gray-700 md:text-body-l">Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.</p><dl className="flex items-end gap-10 whitespace-nowrap sm:gap-14">{growthStats.map((stat) => <div key={stat.label} className="flex flex-col-reverse"><dt className="font-satoshi text-body-l text-gray-700">{stat.label}</dt><dd className="font-poppins text-display-xs font-medium text-blue-800">{stat.value}</dd></div>)}</dl></div><div className="relative w-full max-w-[621px]"><div className="relative aspect-[621/552] w-full"><div className="absolute left-0 top-0 z-20 w-[375px] max-w-full"><CourseCard course={courses[0]} /></div><img src={studentImage} alt="Student learning online with a laptop" className="absolute left-0 top-3 h-full w-full rounded-2xl object-cover shadow-card-a" /><div className="absolute right-0 top-[38%] hidden md:block"><ProgressCard /></div></div></div></div>
+        <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:gap-[79px]"><div className="relative w-full max-w-[541px]"><div className="relative aspect-[541/596] w-full"><div className="absolute left-0 top-11 z-20 w-full max-w-[260px]"><RevenueCard wide title="Total Revenue" period="July 1-28" amount="$120.29" /></div><div className="absolute left-0 top-[33%] z-20 w-[134px]"><RevenueCard title="Year to Date" period="2023" amount="$1,200.38" /></div><div className="absolute right-0 top-0 h-full w-[435px] max-w-[80%] overflow-hidden rounded-2xl shadow-card-a"><img src={creatorImage} alt="Smiling creator with headphones holding a tablet" className="h-full w-full object-cover" /></div><div className="absolute bottom-[5%] right-0 z-20 hidden md:block"><HappyStudentsCard tone="lime" /></div></div></div><div className="flex w-full flex-col gap-8 lg:w-[580px] lg:shrink-0 lg:gap-10"><h2 className="max-w-[391px] font-poppins text-[32px] font-semibold leading-[1.2] tracking-[-0.01em] text-gray-950 md:text-heading-m">Create &amp; Manage Courses Easily.</h2><p className="max-w-[574px] font-satoshi text-body-m text-gray-700 md:text-body-l"><strong className="font-bold text-gray-950">ByteSpace</strong> supports individuals or entities in the creation, publication, and administration of educational courses.</p><ul className="flex flex-col gap-4">{creatorPerks.map((perk) => <li key={perk} className="flex items-center gap-2 font-satoshi text-label-l text-gray-950"><CheckCircle className="h-5 w-5 shrink-0 text-blue-800" />{perk}</li>)}</ul></div></div>
       </div>
     </section>
   );
